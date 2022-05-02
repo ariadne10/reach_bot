@@ -9,7 +9,6 @@ uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=Tru
 for uploaded_file in uploaded_files:
      bytes_data = uploaded_file.read()
      st.write("filename:", uploaded_file.name)
-     st.write(bytes_data)
 
 
 # df1 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\EU Sales FY21.xlsx')
