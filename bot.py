@@ -8,19 +8,19 @@ import streamlit as st
 df1 = st.file_uploader("Choose a file")
 if df1 is not None:     
      # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(uploaded_file)
+     dataframe = pd.read_csv(df1)
      st.write(dataframe)
      
 df2 = st.file_uploader("Choose a file")
 if df2 is not None:     
      # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(uploaded_file)
+     dataframe = pd.read_csv(df2)
      st.write(dataframe)
 
 df3 = st.file_uploader("Choose a file")
 if df3 is not None:     
      # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(uploaded_file)
+     dataframe = pd.read_csv(df3)
      st.write(dataframe)
 
 
