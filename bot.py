@@ -4,13 +4,69 @@ import time
 
 # Import and organize excel sheets into dataframes
 
-df1 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\EU Sales FY21.xlsx')
+df1 = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+     # To read file as bytes:
+     bytes_data = uploaded_file.getvalue()
+     st.write(bytes_data)
 
-df2 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\SKU list 040522.xlsx')
+     # To convert to a string based IO:
+     stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+     st.write(stringio)
+
+     # To read file as string:
+     string_data = stringio.read()
+     st.write(string_data)
+
+     # Can be used wherever a "file-like" object is accepted:
+     dataframe = pd.read_csv(uploaded_file)
+     st.write(dataframe)
+     
+df2 = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+     # To read file as bytes:
+     bytes_data = uploaded_file.getvalue()
+     st.write(bytes_data)
+
+     # To convert to a string based IO:
+     stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+     st.write(stringio)
+
+     # To read file as string:
+     string_data = stringio.read()
+     st.write(string_data)
+
+     # Can be used wherever a "file-like" object is accepted:
+     dataframe = pd.read_csv(uploaded_file)
+     st.write(dataframe)
+     
+df3 = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+     # To read file as bytes:
+     bytes_data = uploaded_file.getvalue()
+     st.write(bytes_data)
+
+     # To convert to a string based IO:
+     stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+     st.write(stringio)
+
+     # To read file as string:
+     string_data = stringio.read()
+     st.write(string_data)
+
+     # Can be used wherever a "file-like" object is accepted:
+     dataframe = pd.read_csv(uploaded_file)
+     st.write(dataframe)
+
+
+
+# df1 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\EU Sales FY21.xlsx')
+
+# df2 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\SKU list 040522.xlsx')
 
 df2 = df2[["Material Number", "FY22 Forecast"]]
 
-df3 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\REACH Report 04-05-22.xlsx', sheet_name='Master').dropna()
+# df3 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\REACH Report 04-05-22.xlsx', sheet_name='Master').dropna()
 
 df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
 
