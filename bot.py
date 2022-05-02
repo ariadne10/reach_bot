@@ -24,7 +24,7 @@ df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').res
 df3.drop(df3.columns[0], inplace=True, axis=1)
 
 ############################################## FY21 USAGE ####################################################
-
+ 
 # Merge df2 & df3 values based on identical Materials
 
 df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
