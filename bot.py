@@ -10,19 +10,6 @@ if uploaded_file is not None:
      # Can be used wherever a "file-like" object is accepted:
      dataframe = pd.read_csv(uploaded_file)
      st.write(dataframe)
-     
-df2 = st.file_uploader("Choose a file")
-if uploaded_file is not None:
-     # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(uploaded_file)
-     st.write(dataframe)
-     
-df3 = st.file_uploader("Choose a file")
-if uploaded_file is not None:
-     # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(uploaded_file)
-     st.write(dataframe)
-
 
 
 # df1 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\EU Sales FY21.xlsx')
