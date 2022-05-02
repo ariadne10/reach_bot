@@ -8,20 +8,17 @@ import streamlit as st
 df1 = st.file_uploader("Choose a file")
 if df1 is not None:     
      # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(df1)
-     st.write(dataframe)
+     df1 = pd.read_csv(df1)
      
 df2 = st.file_uploader("Choose a file")
 if df2 is not None:     
      # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(df2)
-     st.write(dataframe)
+     df2 = pd.read_csv(df2)
 
 df3 = st.file_uploader("Choose a file")
 if df3 is not None:     
      # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(df3)
-     st.write(dataframe)
+     df3 = pd.read_csv(df3)
 
 
 # df1 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\EU Sales FY21.xlsx')
