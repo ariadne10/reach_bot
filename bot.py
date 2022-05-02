@@ -5,20 +5,11 @@ import streamlit as st
 
 # Import and organize excel sheets into dataframes
 
-df1 = st.file_uploader("Choose a file")
-if df1 is not None:     
-     # Can be used wherever a "file-like" object is accepted:
-     df1 = pd.read_csv(df1)
-     
-df2 = st.file_uploader("Choose a file")
-if df2 is not None:     
-     # Can be used wherever a "file-like" object is accepted:
-     df2 = pd.read_csv(df2)
-
-df3 = st.file_uploader("Choose a file")
-if df3 is not None:     
-     # Can be used wherever a "file-like" object is accepted:
-     df3 = pd.read_csv(df3)
+uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
+for uploaded_file in uploaded_files:
+     bytes_data = uploaded_file.read()
+     st.write("filename:", uploaded_file.name)
+     st.write(bytes_data)
 
 
 # df1 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\EU Sales FY21.xlsx')
