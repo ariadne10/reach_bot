@@ -11,19 +11,6 @@ if uploaded_file is not None:
      df1 = pd.read_csv(uploaded_file)
      st.write(df1)
 
-df2 = st.file_uploader("Choose a file")
-if uploaded_file is not None:     
-     # Can be used wherever a "file-like" object is accepted:
-     df2 = pd.read_csv(uploaded_file)
-     st.write(df2)
-
-df3 = st.file_uploader("Choose a file")
-if uploaded_file is not None:     
-     # Can be used wherever a "file-like" object is accepted:
-     df3 = pd.read_csv(uploaded_file)
-     st.write(df3)
-
-
 # df1 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\EU Sales FY21.xlsx')
 
 # df2 = pd.read_excel (r'C:\Users\rmeli\Desktop\Reach Sheets\SKU list 040522.xlsx')
