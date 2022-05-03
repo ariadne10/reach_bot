@@ -17,7 +17,7 @@ df1 = st.sidebar.file_uploader(label="Upload EU Sales FY21 below:",
                                          type=['csv', 'xlsx'])
 
 if df1 is not None:
-  print(df1)
+  st.table(df1)
   print('hello')
   try:
     df1 = pd.read_csv(df1)
@@ -27,10 +27,7 @@ if df1 is not None:
 try:
   df1 = pd.read_excel(df1)
 except Exception as e:
-  print(e)
-  st.write("Upload EU Sales FY21")        
-    
-    
+  print(e)      
     
 df2 = st.sidebar.file_uploader(label="Upload SKU List below:",
                                          type=['csv', 'xlsx'])
@@ -47,7 +44,6 @@ try:
   df2 = df2[["Material Number", "FY22 Forecast"]]
 except Exception as e:
   print(e)
-  st.write("Upload SKU List")  
     
    
   
@@ -56,7 +52,7 @@ df3 = st.sidebar.file_uploader(label="Upload REACH Master below:",
                                          type=['csv', 'XLSX'])
 
 if df3 is not None:
-  print(df2)
+  print(df3)
   print('hello')
   try:
     df3 = pd.read_csv(df3)
@@ -68,16 +64,13 @@ try:
   df3 = df3.dropna()
   df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
   df3 = df3.drop(df3.columns[0], inplace=True, axis=1)
+  
 except Exception as e:
   print(e) 
-  st.write('DF3')
 
 # Merge df2 & df3 values based on identical Materials
 
 
- 
-
-  
 df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
 
  
