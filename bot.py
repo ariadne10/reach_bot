@@ -188,7 +188,6 @@ chart_data = pd.DataFrame(
      list(df_mask['Component']),
      df_mask['FY21 Usage'])
 
-st.line_chart(chart_data)
+st.bar_chart(chart_data)
 
 
-st.metric(label= df_mask['Component'], value= df_mask['FY21 Usage'], delta="1.2 °F")
