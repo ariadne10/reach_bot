@@ -69,6 +69,7 @@ try:
   df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
   df3 = df3.drop(df3.columns[0], inplace=True, axis=1)
 except Exception as e:
+  print(e)
   st.stop()
 
  
