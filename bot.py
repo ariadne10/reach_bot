@@ -181,5 +181,5 @@ df_mask = df[(df['FY21 Usage']>= 750) | (df['REACH FY22']>= 750)].reset_index()
 
 df_mask.drop(df_mask.columns[0], inplace=True, axis=1)
              
-st.table(df_mask)
+df_mask
 
