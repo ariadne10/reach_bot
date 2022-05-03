@@ -186,9 +186,9 @@ df_mask.drop(df_mask.columns[0], inplace=True, axis=1)
 df_mask
 
 # Bar Chart
-chart_data = pd.DataFrame(
-     columns = list(df_mask['Component']),
-     np.random.randn(50, 30))
+chart_data = df_mask(
+     columns = ['Component'],
+     df_mask['FY21 Usage'])
 
 st.bar_chart(chart_data)
 
