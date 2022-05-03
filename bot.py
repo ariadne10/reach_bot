@@ -55,7 +55,6 @@ except Exception as e:
 df3 = st.sidebar.file_uploader(label="Upload REACH Master below:",
                                          type=['csv', 'XLSX'])
 
-
 if df3 is not None:
   print(df3)
   print('hello')
@@ -72,9 +71,13 @@ try:
 except Exception as e:
   print(e)
 
+  
 # Merge df2 & df3 values based on identical Materials
 
 df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
+
+if df10 is not None:
+  pass
  
 # Show columns needed
 
