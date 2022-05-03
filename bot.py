@@ -176,9 +176,10 @@ try:
   df_mask.drop(df_mask.columns[0], inplace=True, axis=1)
              
   df_mask
-  except Exception as e: 
-    print(e)
-    st.write("Please upload your files")
+  
+except Exception as e: 
+  print(e)
+  st.write("Please upload your files")
                                          
 
 
