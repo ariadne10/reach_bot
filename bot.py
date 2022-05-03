@@ -23,7 +23,12 @@ if uploaded_file is not None:
   except Exception as e:
     print(e)
     df1 = pd.read_excel(uploaded_file)
-
+try:
+  st.write(df1)
+except Exception as e:
+  print(e)
+  st.write('Please upload your file")
+            
 uploaded_file = st.sidebar.file_uploader(label="Upload SKU List",
                                          type=['csv', 'xlsx'])
 global df2
