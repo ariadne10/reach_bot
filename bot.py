@@ -65,4 +65,4 @@ final1 = final1.rename(columns={"index": "Component", 0: "FY21 Usage"})
 
 final1 = final1.sort_values(by="Component", ascending= True)
 
-
+st.table(final1)
