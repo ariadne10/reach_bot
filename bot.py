@@ -21,13 +21,9 @@ df2 = st.sidebar.file_uploader(label="Upload SKU List",
 df3 = st.sidebar.file_uploader(label="Upload REACH Report",
                                          type=['csv', 'xlsx'])
                                          
-df1 = pd.read_excel(df1)
-
-df2 = pd.read_excel(df2)
 df2 = df2[["Material Number", "FY22 Forecast"]]
 
 
-df3 = pd.read_excel(df3)
 df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
 df3.drop(df3.columns[0], inplace=True, axis=1)
 
