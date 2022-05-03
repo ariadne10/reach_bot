@@ -28,7 +28,7 @@ try:
   pass
 except Exception as e:
   print(e)
-  st.write("Please upload your files")        
+  st.write("Upload EU Sales FY21")        
     
     
     
@@ -47,7 +47,7 @@ try:
   df2 = df2[["Material Number", "FY22 Forecast"]]
 except Exception as e:
   print(e)
-  st.write("Please upload your files")  
+  st.write("Upload SKU List")  
     
    
   
