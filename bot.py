@@ -63,11 +63,8 @@ if df3 is not None:
   except Exception as e:
     print(e)
     df3 = pd.read_excel(df3, sheet_name = 'Master')
-try:
-  pass
-except Exception as e:
-  print(e)
-  st.stop()
+    st.stop()
+
 
 df3 = df3.dropna()
 df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
