@@ -60,16 +60,17 @@ if df3 is not None:
     print(e)
     df3 = pd.read_excel(df3, sheet_name = 'Master')
 try:
+  df3 = pd.read_excel(df3, sheet_name = 'Master')
+  df3 = df3.dropna()
   df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
+  df3 = df3.drop(df3.columns[0], inplace=True, axis=1)
   
 else:
+  print(e)
+
+if df3 is None:
   st.stop()
 
-
-df3 = pd.read_excel(df3, sheet_name = 'Master')
-df3 = df3.dropna()
-df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
-df3 = df3.drop(df3.columns[0], inplace=True, axis=1)
 
 # Merge df2 & df3 values based on identical Materials
 df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
