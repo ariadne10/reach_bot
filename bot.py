@@ -61,12 +61,12 @@ if df3 is not None:
     print(e)
     df3 = pd.read_excel(df3)
 try:
-  st.write(df3)
+  df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
+  st.write(df3.drop(df3.columns[0], inplace=True, axis=1))
 except Exception as e:
   print(e)
   st.write("Please upload your file")
                                          
-df2 = df2[["Material Number", "FY22 Forecast"]]
 
 
 df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
