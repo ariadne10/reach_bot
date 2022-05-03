@@ -184,7 +184,7 @@ df_mask.drop(df_mask.columns[0], inplace=True, axis=1)
 df_mask
 
 # Bar Chart
-chart_data = pd.df_mask(
+chart_data = pd.DataFrame(
      np.random.randn(50, 3),
      columns=["a", "b", "c"])
 
