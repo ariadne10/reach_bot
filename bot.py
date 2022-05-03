@@ -63,7 +63,6 @@ if df3 is not None:
   except Exception as e:
     print(e)
     df3 = pd.read_excel(df3, sheet_name = 'Master')
-    st.stop()
 
 
 df3 = df3.dropna()
