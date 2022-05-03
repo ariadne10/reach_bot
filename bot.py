@@ -72,6 +72,7 @@ try:
 except Exception as e:
   print(e)
   st.write("Please upload your files")
+pass 
 
 # Merge df2 & df3 values based on identical Materials
 
