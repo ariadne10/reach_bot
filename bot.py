@@ -187,8 +187,4 @@ df_mask
 # Bar Chart
 
 
-st.bar_chart(df_mask['Component']['FY21 Usage'])
-
-
-
 
