@@ -54,7 +54,7 @@ except Exception as e:
   
 
 df3 = st.sidebar.file_uploader(label="Upload REACH",
-                                         type=['csv', 'xlsx'])
+                                         type=['csv', 'XLSX'])
 
 
 if df3 is not None:
@@ -167,7 +167,7 @@ final = final.sort_values(by="Component", ascending=True)
 
 # Add date to file export
 
-timestr = time.strftime(" %m-%d-%Y")
+#timestr = time.strftime(" %m-%d-%Y")
 
 
 # Combine FY21 Usage & REACH FY22
