@@ -185,7 +185,7 @@ df_mask
 
 # Bar Chart
 chart_data = pd.DataFrame(
-     np.random.randn(50, 3),
-     columns=["a", "b", "c"])
+     np.random.randn(20, 3),
+     df_mask['Component')
 
-st.bar_chart(chart_data)
+st.line_chart(chart_data)
