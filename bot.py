@@ -71,8 +71,9 @@ try:
 except Exception as e:
   print(e)
 
-  
+ 
 # Merge df2 & df3 values based on identical Materials
+df10 = df3
 if df10 is not None:
   df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
 
