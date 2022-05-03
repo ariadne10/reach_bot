@@ -75,7 +75,7 @@ except Exception as e:
 
 # Merge df2 & df3 values based on identical Materials
 
-if pd.read_excel(df3, sheet_name = 'Master') == 'NoneType':
+if pd.read_excel(df3, sheet_name = 'Master') != df3:
   st.stop()
 else:
   pass
