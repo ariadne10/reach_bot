@@ -3,6 +3,8 @@ import numpy as np
 import time
 import streamlit as st
 import pip
+import matplotlib.pyplot as plt
+
 pip.main(["install", "openpyxl"])
 
 # Import and organize excel sheets into dataframes
@@ -185,8 +187,11 @@ df_mask
 
 # Bar Chart
 chart_data = pd.DataFrame(
-     np.random.randn(50, 30),
-     columns = list(df_mask['Component']))
+     columns = list(df_mask['Component']),
+     np.random.randn(50, 30))
 
 st.bar_chart(chart_data)
+
+
+
 
