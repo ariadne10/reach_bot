@@ -27,7 +27,7 @@ try:
   st.write(df1)
 except Exception as e:
   print(e)
-  st.write('Please upload your file")
+  st.write("Please upload your file")
             
 uploaded_file = st.sidebar.file_uploader(label="Upload SKU List",
                                          type=['csv', 'xlsx'])
