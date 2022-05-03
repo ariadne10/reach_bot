@@ -31,6 +31,7 @@ except Exception as e:
             
     
     
+    
 df2 = st.sidebar.file_uploader(label="Upload SKU List",
                                          type=['csv', 'xlsx'])
 
@@ -48,9 +49,10 @@ except Exception as e:
   print(e)
   st.write("Please upload your file")
     
-    
+   
+  
 
-df3 = st.sidebar.file_uploader(label="Upload SKU List",
+df3 = st.sidebar.file_uploader(label="Upload REACH",
                                          type=['csv', 'xlsx'])
 
 if df3 is not None:
