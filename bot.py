@@ -33,6 +33,8 @@ if df2 is not None:
   except Exception as e:
     print(e)
     df2 = pd.read_excel(df2)
+    
+df2 = df2[["Material Number", "FY22 Forecast"]]
 
 df3 = st.sidebar.file_uploader(label="Upload REACH Report",
                                          type=['csv', 'xlsx'])
@@ -45,7 +47,7 @@ if df3 is not None:
     print(e)
     df3 = pd.read_excel(df3)
                                          
-df2 = df2[["Material Number", "FY22 Forecast"]]
+
 
 
 df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
