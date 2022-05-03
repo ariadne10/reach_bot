@@ -14,6 +14,7 @@ st.sidebar.subheader("Visualization Settings")
 # Setup File Upload
 df1 = st.sidebar.file_uploader(label="Upload EU Sales",
                                          type=['csv', 'xlsx'])
+global df1
 if df1 is not None:
   print(df1)
   print('hello')
@@ -25,6 +26,7 @@ if df1 is not None:
 
 df2 = st.sidebar.file_uploader(label="Upload SKU List",
                                          type=['csv', 'xlsx'])
+global df2
 if df2 is not None:
   print(df2)
   print('hello')
@@ -38,6 +40,7 @@ df2 = df2[["Material Number", "FY22 Forecast"]]
 
 df3 = st.sidebar.file_uploader(label="Upload REACH Report",
                                          type=['csv', 'xlsx'])
+global df3
 if df3 is not None:
   print(df3)
   print('hello')
