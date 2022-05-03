@@ -73,11 +73,10 @@ except Exception as e:
 
   
 # Merge df2 & df3 values based on identical Materials
-
-df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
-
 if df10 is not None:
-  pass
+  df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
+
+
  
 # Show columns needed
 
