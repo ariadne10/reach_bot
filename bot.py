@@ -55,8 +55,6 @@ except Exception as e:
 df3 = st.sidebar.file_uploader(label="Upload REACH",
                                          type=['csv', 'xlsx'])
 
-df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
-df3.drop(df3.columns[0], inplace=True, axis=1)
 
 if df3 is not None:
   print(df3)
@@ -67,7 +65,7 @@ if df3 is not None:
     print(e)
     df3 = pd.read_excel(df3)
 try:
-  st.write(df3)
+  st.write(df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index())
 except Exception as e:
   print(e)
   st.write("Please upload your file")
