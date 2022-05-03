@@ -188,7 +188,7 @@ df_mask
 # Bar Chart
 chart_data = df_mask(
      columns = ['Component'],
-     df_mask['FY21 Usage'])
+     ['FY21 Usage'])
 
 st.bar_chart(chart_data)
 
