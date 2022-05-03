@@ -9,5 +9,5 @@ pip.main(["install", "openpyxl"])
 
 st.title("REACH Reports")
 
-df = pd.read_excel("sheets/SKU list 040522.xlsx")
-st.table(df)
+df2 = pd.read_excel("sheets/SKU list 040522.xlsx")
+st.table(df2)
