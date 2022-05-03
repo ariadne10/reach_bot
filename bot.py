@@ -177,11 +177,11 @@ try:
              
   df_mask
   
-  except Exception as e: 
-    print(e)
-    st.write("Please upload your files")
+except Exception as e: 
+  print(e)
+  st.write("Please upload your files")
                                          
-
+df_mask
 
 ############################################## FY21 USAGE ####################################################
 
