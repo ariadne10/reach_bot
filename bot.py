@@ -36,7 +36,6 @@ if uploaded_file is not None:
     print(e)
     df2 = pd.read_excel(uploaded_file)
     
-df2 = df2[["Material Number", "FY22 Forecast"]]
 
 uploaded_file = st.sidebar.file_uploader(label="Upload REACH Report",
                                          type=['csv', 'xlsx'])
@@ -50,7 +49,7 @@ if uploaded_file is not None:
     print(e)
     df3 = pd.read_excel(uploaded_file)
                                          
-
+df2 = df2[["Material Number", "FY22 Forecast"]]
 
 
 df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
