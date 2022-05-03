@@ -75,7 +75,7 @@ except Exception as e:
 
 # Merge df2 & df3 values based on identical Materials
 
-if df3 == 'NoneType':
+if df3 == NoneType:
   st.stop()
 
 df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
@@ -140,7 +140,7 @@ df3.drop(df3.columns[0], inplace=True, axis=1)
 
 df3.columns = [c.replace(' ', '_') for c in df3.columns]
 
-
+ 
 # (Forecast * Quantity) / 1000 = FY22 BOM
 
 df3['REACH'] = (df3.Quantity * df3.FY22_Forecast)/1000
