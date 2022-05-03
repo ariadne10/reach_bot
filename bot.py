@@ -12,47 +12,48 @@ st.title("REACH Reports")
 st.sidebar.subheader("Visualization Settings")
 
 # Setup File Upload
-uploaded_file = st.sidebar.file_uploader(label="Upload EU Sales",
+df1 = st.sidebar.file_uploader(label="Upload EU Sales",
                                          type=['csv', 'xlsx'])
-global df1
-if uploaded_file is not None:
-  print(uploaded_file)
+
+if df1 is not None:
+  print(df1)
   print('hello')
   try:
-    df1 = pd.read_csv(uploaded_file)
+    df1 = pd.read_csv(df1)
   except Exception as e:
     print(e)
-    df1 = pd.read_excel(uploaded_file)
+    df1 = pd.read_excel(df1)
 try:
   st.write(df1)
 except Exception as e:
   print(e)
   st.write("Please upload your file")
             
-uploaded_file = st.sidebar.file_uploader(label="Upload SKU List",
+    
+    
+df2 = st.sidebar.file_uploader(label="Upload SKU List",
                                          type=['csv', 'xlsx'])
-global df2
-if uploaded_file is not None:
-  print(uploaded_file)
+
+if df2 is not None:
+  print(df2)
   print('hello')
   try:
-    df2 = pd.read_csv(uploaded_file)
+    df2 = pd.read_csv(df2)
   except Exception as e:
     print(e)
-    df2 = pd.read_excel(uploaded_file)
+    df2 = pd.read_excel(df2)
     
 
-uploaded_file = st.sidebar.file_uploader(label="Upload REACH Report",
+df3 = st.sidebar.file_uploader(label="Upload REACH Report",
                                          type=['csv', 'xlsx'])
-global df3
-if uploaded_file is not None:
-  print(uploaded_file)
+if df3 is not None:
+  print(df3)
   print('hello')
   try:
-    df3 = pd.read_csv(uploaded_file)
+    df3 = pd.read_csv(df3)
   except Exception as e:
     print(e)
-    df3 = pd.read_excel(uploaded_file)
+    df3 = pd.read_excel(df3)
                                          
 df2 = df2[["Material Number", "FY22 Forecast"]]
 
