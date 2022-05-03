@@ -12,7 +12,13 @@ st.title("REACH Reports")
 st.sidebar.subheader("Wisualization Settings")
 
 # Setup File Upload
-uploaded_file = st.sidebar.file_uploader(label="Upload file.",
+df1 = st.sidebar.file_uploader(label="Upload EU Sales",
+                                         type=['csv', 'xlsx'])
+
+df2 = st.sidebar.file_uploader(label="Upload SKU List",
+                                         type=['csv', 'xlsx'])
+
+df3 = st.sidebar.file_uploader(label="Upload REACH Report",
                                          type=['csv', 'xlsx'])
                                          
 df1 = pd.read_excel("sheets/EU Sales FY21.xlsx")
