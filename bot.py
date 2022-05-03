@@ -24,10 +24,6 @@ if df1 is not None:
   except Exception as e:
     print(e)
     df1 = pd.read_excel(df1)
-try:
-  pass
-except Exception as e:
-  st.write("Please upload your files")
             
     
     
@@ -46,7 +42,7 @@ if df2 is not None:
 try:
   df2 = df2[["Material Number", "FY22 Forecast"]]
 except Exception as e:
-  st.write("Please upload your files")
+  pass
     
    
   
