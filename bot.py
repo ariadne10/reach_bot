@@ -65,6 +65,7 @@ if df3 is not None:
     print(e)
     df3 = pd.read_excel(df3)
 try:
+  df3 = df3.dropna()
   df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
   df3 = df3.drop(df3.columns[0], inplace=True, axis=1)
   #st.write(df3)
