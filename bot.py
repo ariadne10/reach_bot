@@ -3,7 +3,6 @@ import numpy as np
 import time
 import streamlit as st
 import pip
-import matplotlib.pyplot as plt
 
 pip.main(["install", "openpyxl"])
 
