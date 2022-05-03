@@ -73,8 +73,7 @@ except Exception as e:
   st.write("Please upload your files")  
     
 
-
-  # Merge df2 & df3 values based on identical Materials
+# Merge df2 & df3 values based on identical Materials
 
 df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
 
