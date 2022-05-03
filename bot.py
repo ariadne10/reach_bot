@@ -43,7 +43,7 @@ if df2 is not None:
     print(e)
     df2 = pd.read_excel(df2)
 try:
-  st.write(df2["Material Number", "FY22 Forecast"])
+  st.write(df2[["Material Number", "FY22 Forecast"]])
 except Exception as e:
   print(e)
   st.write("Please upload your file")
