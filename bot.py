@@ -7,6 +7,6 @@ import streamlit as st
 
 uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=True)
 for uploaded_file in uploaded_files:
-     df2 = uploaded_file.read()
+     df2 = pd.read_csv(uploaded_file)
      st.write("filename:", uploaded_file.name)
      st.write(df2)
