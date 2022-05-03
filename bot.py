@@ -27,7 +27,13 @@ if df1 is not None:
 try:
   df1 = pd.read_excel(df1)
 except Exception as e:
-  print(e)      
+  print(e)   
+  
+if df1 is None:
+  print('Upload EU Sales FY21')
+  st.stop()   
+  
+  
     
 df2 = st.sidebar.file_uploader(label="Upload SKU List below:",
                                          type=['csv', 'xlsx'])
@@ -45,7 +51,9 @@ try:
 except Exception as e:
   print(e)
     
-   
+if df2 is None:
+  print('Upload SKU List')
+  st.stop()   
   
 
 df3 = st.sidebar.file_uploader(label="Upload REACH Master below:",
@@ -69,6 +77,7 @@ except Exception as e:
   print(e)
 
 if df3 is None:
+  print('Upload REACH Master')
   st.stop()
 
 
