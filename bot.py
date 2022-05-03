@@ -42,6 +42,12 @@ if df2 is not None:
   except Exception as e:
     print(e)
     df2 = pd.read_excel(df2)
+try:
+  st.write(df2)
+except Exception as e:
+  print(e)
+  st.write("Please upload your file")
+    
     
 
 df3 = st.sidebar.file_uploader(label="Upload REACH Report",
@@ -54,6 +60,11 @@ if df3 is not None:
   except Exception as e:
     print(e)
     df3 = pd.read_excel(df3)
+try:
+  st.write(df3)
+except Exception as e:
+  print(e)
+  st.write("Please upload your file")
                                          
 df2 = df2[["Material Number", "FY22 Forecast"]]
 
