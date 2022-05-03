@@ -14,6 +14,14 @@ st.sidebar.subheader("Wisualization Settings")
 # Setup File Upload
 df1 = st.sidebar.file_uploader(label="Upload EU Sales",
                                          type=['csv', 'xlsx'])
+if df1 is not None:
+  print(df1)
+  print('hello')
+  try:
+    df1 = pd.read_csv(df1)
+  except Exception as e:
+    print(e)
+    df = pd.read_excel(df1)
 
 df2 = st.sidebar.file_uploader(label="Upload SKU List",
                                          type=['csv', 'xlsx'])
