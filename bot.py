@@ -9,7 +9,7 @@ pip.main(["install", "openpyxl"])
 
 st.title("REACH Reports")
 
-at.sidebar.subheader("Wisualization Settings")
+st.sidebar.subheader("Wisualization Settings")
 
 # Setup File Upload
 uploaded_file = st.sidebar.file_uploader(label="Upload file.",
