@@ -56,8 +56,7 @@ df3 = st.sidebar.file_uploader(label="Upload REACH Master below:",
                                          type=['csv', 'XLSX'])
 
 if df3 is not None:
-  print(df3)
-  print('hello')
+  st.stop()
   try:
     df3 = pd.read_csv(df3)
   except Exception as e:
@@ -74,9 +73,7 @@ except Exception as e:
 
 # Merge df2 & df3 values based on identical Materials
 
-if df3 is not None:
 
-st.stop()
  
 
   
