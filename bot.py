@@ -17,7 +17,9 @@ df2 = df2[["Material Number", "FY22 Forecast"]]
 
 
 df3 = pd.read_excel("sheets/REACH Report 040522.XLSX", sheet_name='Master')
+df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
 df3.drop(df3.columns[0], inplace=True, axis=1)
+
 
 ############################################## FY21 USAGE ####################################################
 
@@ -25,5 +27,5 @@ df3.drop(df3.columns[0], inplace=True, axis=1)
 
 df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
 
-df10 = df10[["Material", "Component", "Quantity", "Tot. usage"]].sort_values(by='Component').reset_index()
+
 
