@@ -61,7 +61,7 @@ if df3 is not None:
   print(df3)
   print('hello')
   try:
-    df3 = pd.read_csv(df3)
+    df3 = pd.read_csv(df3, sheet_name='Master')
   except Exception as e:
     print(e)
     df3 = pd.read_excel(df3)
