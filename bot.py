@@ -5,9 +5,7 @@ import streamlit as st
 
 # Import and organize excel sheets into dataframes
 
-uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file is not None:
+st.title("REACH Reports")
 
-     # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(uploaded_file)
-     st.write(dataframe)
+df = pd.read_xlsx("reach_bot/SKU list 040522.xlsx")
+st.table(df)
