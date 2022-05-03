@@ -18,6 +18,7 @@ df2 = df2[["Material Number", "FY22 Forecast"]]
 st.table(df2)
 
 df3 = pd.read_excel("sheets/REACH Report 040522.XLSX", sheet_name='Master')
+df3.drop(df3.columns[0], inplace=True, axis=1)
 st.table(df3)
 
 
