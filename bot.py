@@ -10,10 +10,10 @@ pip.main(["install", "openpyxl"])
 
 st.title("REACH Report")
 
-st.sidebar.subheader("Upload .xlsx Documents")
+st.sidebar.subheader("Follow the steps below")
 
 # Setup File Upload
-df1 = st.sidebar.file_uploader(label="Upload EU Sales FY21 below:",
+df1 = st.sidebar.file_uploader(label="STEP 1: Upload EU Sales FY21",
                                          type=['csv', 'xlsx'])
 
 if df1 is not None:
@@ -35,7 +35,7 @@ if df1 is None:
   
   
     
-df2 = st.sidebar.file_uploader(label="Upload SKU List below:",
+df2 = st.sidebar.file_uploader(label="STEP 2: Upload SKU List below",
                                          type=['csv', 'xlsx'])
 
 if df2 is not None:
@@ -56,7 +56,7 @@ if df2 is None:
   st.stop()   
   
 
-df3 = st.sidebar.file_uploader(label="Upload REACH Master below:",
+df3 = st.sidebar.file_uploader(label="STEP 3: Upload REACH Master below",
                                          type=['csv', 'XLSX'])
 
 if df3 is not None:
