@@ -9,7 +9,12 @@ pip.main(["install", "openpyxl"])
 
 st.title("REACH Reports")
 
+at.sidebar.subheader("Wisualization Settings")
 
+# Setup File Upload
+uploaded_file = st.sidebar.file_uploader(label="Upload file.",
+                                         type=['csv', 'xlsx'])
+                                         
 df1 = pd.read_excel("sheets/EU Sales FY21.xlsx")
 
 df2 = pd.read_excel("sheets/SKU list 040522.xlsx")
