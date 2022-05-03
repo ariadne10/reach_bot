@@ -190,4 +190,3 @@ chart_data = pd.DataFrame(
 
 st.bar_chart(chart_data)
 
-
