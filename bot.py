@@ -50,8 +50,9 @@ except Exception as e:
     
     
 
-df3 = st.sidebar.file_uploader(label="Upload REACH Report",
+df3 = st.sidebar.file_uploader(label="Upload SKU List",
                                          type=['csv', 'xlsx'])
+
 if df3 is not None:
   print(df3)
   print('hello')
