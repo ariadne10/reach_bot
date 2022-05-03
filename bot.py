@@ -56,7 +56,8 @@ df3 = st.sidebar.file_uploader(label="Upload REACH Master below:",
                                          type=['csv', 'XLSX'])
 
 if df3 is not None:
-  st.stop()
+  print(df2)
+  print('hello')
   try:
     df3 = pd.read_csv(df3)
   except Exception as e:
@@ -69,7 +70,7 @@ try:
   df3 = df3.drop(df3.columns[0], inplace=True, axis=1)
 except Exception as e:
   print(e) 
-    
+  st.write('DF3')
 
 # Merge df2 & df3 values based on identical Materials
 
