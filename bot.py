@@ -75,7 +75,8 @@ except Exception as e:
 # Merge df2 & df3 values based on identical Materials
 
 if df3 is not None:
-    st.stop()
+
+st.stop()
  
 
   
