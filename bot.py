@@ -186,11 +186,9 @@ df_mask.drop(df_mask.columns[0], inplace=True, axis=1)
 df_mask
 
 # Bar Chart
-chart_data = df_mask(
-     columns = ['Component'],
-     ['FY21 Usage'])
 
-st.bar_chart(df_mask['Component'])
+
+st.bar_chart(df_mask['Component']['FY21 Usage'])
 
 
 
