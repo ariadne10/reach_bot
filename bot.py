@@ -24,7 +24,7 @@ if df1 is not None:
     print(e)
     df1 = pd.read_excel(df1)
 try:
-  pass #st.write(df1)
+  df1
 except Exception as e:
   print(e)
   st.write("Please upload your file")
