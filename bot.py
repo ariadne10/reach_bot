@@ -9,7 +9,7 @@ pip.main(["install", "openpyxl"])
 
 st.title("REACH Reports")
 
-st.sidebar.subheader("Wisualization Settings")
+st.sidebar.subheader("Visualization Settings")
 
 # Setup File Upload
 df1 = st.sidebar.file_uploader(label="Upload EU Sales",
@@ -21,13 +21,29 @@ if df1 is not None:
     df1 = pd.read_csv(df1)
   except Exception as e:
     print(e)
-    df = pd.read_excel(df1)
+    df1 = pd.read_excel(df1)
 
 df2 = st.sidebar.file_uploader(label="Upload SKU List",
                                          type=['csv', 'xlsx'])
+if df2 is not None:
+  print(df2)
+  print('hello')
+  try:
+    df2 = pd.read_csv(df2)
+  except Exception as e:
+    print(e)
+    df2 = pd.read_excel(df2)
 
 df3 = st.sidebar.file_uploader(label="Upload REACH Report",
                                          type=['csv', 'xlsx'])
+if df3 is not None:
+  print(df3)
+  print('hello')
+  try:
+    df3 = pd.read_csv(df3)
+  except Exception as e:
+    print(e)
+    df3 = pd.read_excel(df3)
                                          
 df2 = df2[["Material Number", "FY22 Forecast"]]
 
