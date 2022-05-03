@@ -10,10 +10,10 @@ pip.main(["install", "openpyxl"])
 
 st.title("REACH Report")
 
-st.sidebar.subheader("Visualization Settings")
+st.sidebar.subheader("Upload .xlsx Documents")
 
 # Setup File Upload
-df1 = st.sidebar.file_uploader(label="Upload EU Sales",
+df1 = st.sidebar.file_uploader(label="Upload EU Sales FY21 below:",
                                          type=['csv', 'xlsx'])
 
 if df1 is not None:
@@ -33,7 +33,7 @@ except Exception as e:
     
     
     
-df2 = st.sidebar.file_uploader(label="Upload SKU List",
+df2 = st.sidebar.file_uploader(label="Upload SKU List below:",
                                          type=['csv', 'xlsx'])
 
 if df2 is not None:
@@ -53,7 +53,7 @@ except Exception as e:
    
   
 
-df3 = st.sidebar.file_uploader(label="Upload REACH",
+df3 = st.sidebar.file_uploader(label="Upload REACH Master below:",
                                          type=['csv', 'XLSX'])
 
 
