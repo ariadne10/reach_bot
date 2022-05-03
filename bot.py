@@ -65,4 +65,68 @@ final1 = final1.rename(columns={"index": "Component", 0: "FY21 Usage"})
 
 final1 = final1.sort_values(by="Component", ascending= True)
 
-st.table(final1)
+############################################## FY22 FORECAST ####################################################
+
+# Merge df2 & df3 values based on identical Materials
+
+df3 = df3.merge(df2, left_on='Material', right_on='Material Number', how='inner')
+
+
+# Show columns needed
+
+df3 = df3[["Material", "Component", "Quantity", "FY22 Forecast"]].sort_values(by='Component').reset_index()
+
+df3.drop(df3.columns[0], inplace=True, axis=1)
+
+df3.columns = [c.replace(' ', '_') for c in df3.columns]
+
+
+# (Forecast * Quantity) / 1000 = FY22 BOM
+
+df3['REACH'] = (df3.Quantity * df3.FY22_Forecast)/1000
+
+
+# Create dictionary with Components as Keys and FY22 BOM #'s as Values
+
+df3 = df3.groupby('Component').REACH.apply(list).to_dict()
+
+
+# Sum the BOM #'s in each component
+
+final = dict(zip(df3.keys(), [[sum(item)] for item in df3.values()]))
+
+
+# Turn dictionary into dataframe 
+
+final = pd.DataFrame.from_dict(final, orient ='index').reset_index()
+
+
+# Rename columns
+
+final = final.rename(columns={"index": "Component", 0: "REACH FY22"})
+
+# Sort values in descending order
+
+final = final.sort_values(by="Component", ascending=True)
+ 
+
+# Add date to file export
+
+timestr = time.strftime(" %m-%d-%Y")
+
+
+# Combine FY21 Usage & REACH FY22
+
+data = {'Component' : final1['Component'], 'FY21 Usage':final1['FY21 Usage'], 'REACH FY22':final['REACH FY22']}
+
+df = pd.DataFrame(data)
+
+
+# Show columns > 750 (& = and) (| = or)
+
+df_mask = df[(df['FY21 Usage']>= 750) | (df['REACH FY22']>= 750)].reset_index()
+
+df_mask.drop(df_mask.columns[0], inplace=True, axis=1)
+             
+df_mask 
+
