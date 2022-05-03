@@ -27,7 +27,6 @@ if df1 is not None:
 try:
   pass
 except Exception as e:
-  print(e)
   st.write("Please upload your files")
             
     
@@ -47,7 +46,6 @@ if df2 is not None:
 try:
   df2 = df2[["Material Number", "FY22 Forecast"]]
 except Exception as e:
-  print(e)
   st.write("Please upload your files")
     
    
