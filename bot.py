@@ -62,8 +62,7 @@ if df3 is not None:
 try:
   df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
   
-except Exception as e:
-  print(e)
+else:
   st.stop()
 
 
