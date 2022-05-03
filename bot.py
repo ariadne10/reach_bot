@@ -176,16 +176,10 @@ try:
 
   df_mask.drop(df_mask.columns[0], inplace=True, axis=1)
              
-  df_mask
+df_mask
   
 
                                          
-
-############################################## FY21 USAGE ####################################################
-
-
-
-# Bar Chart
 
 
 
