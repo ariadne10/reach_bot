@@ -61,11 +61,12 @@ if df3 is not None:
   print(df3)
   print('hello')
   try:
-    df3 = pd.read_csv(df3, sheet_name='Master')
+    df3 = pd.read_csv(df3)
   except Exception as e:
     print(e)
-    df3 = pd.read_excel(df3, sheetname = 'Master')
+    df3 = pd.read_excel(df3, sheet_name = 'Master')
 try:
+  df3 = pd.read_excel(df3, sheet_name = 'Master')
   df3 = df3.dropna()
   df3 = df3[["Material", "Component", "Quantity"]].sort_values(by='Component').reset_index()
   df3 = df3.drop(df3.columns[0], inplace=True, axis=1)
