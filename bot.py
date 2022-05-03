@@ -8,7 +8,7 @@ pip.main(["install", "openpyxl"])
 
 # Import and organize excel sheets into dataframes
 
-st.title("REACH Reports")
+st.title("REACH Report")
 
 st.sidebar.subheader("Visualization Settings")
 
@@ -72,6 +72,7 @@ try:
   df3 = df3.drop(df3.columns[0], inplace=True, axis=1)
 except Exception as e: 
   print(e)
+  st.write("Please upload your files")
                                          
 
 
