@@ -25,7 +25,7 @@ if df1 is not None:
     print(e)
     df1 = pd.read_excel(df1)
 try:
-  pass
+  ''
 except Exception as e:
   print(e)
   st.write("Upload EU Sales FY21")        
