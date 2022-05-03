@@ -75,8 +75,6 @@ except Exception as e:
 
 # Merge df2 & df3 values based on identical Materials
 
-if df3 == NoneType:
-  st.stop()
 
 df10 = df3.merge(df1, left_on='Material', right_on='Material', how='inner')
 
