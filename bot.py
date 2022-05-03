@@ -7,5 +7,5 @@ import streamlit as st
 
 st.title("REACH Reports")
 
-df = pd.read_excel("SKU list 040522.xlsx")
+df = pd.read_excel("sheets/SKU list 040522.xlsx")
 st.table(df)
