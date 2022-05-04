@@ -56,7 +56,7 @@ if df2 is None:
   st.stop()   
   
 
-df3 = st.sidebar.file_uploader(label="STEP 3: Upload REACH Master below",
+df3 = st.sidebar.file_uploader(label="STEP 3: Upload Master below",
                                          type=['csv', 'XLSX'])
 
 if df3 is not None:
@@ -77,7 +77,7 @@ except Exception as e:
   print(e)
 
 if df3 is None:
-  print('Upload REACH Master')
+  print('Upload Master')
   st.stop()
 
 
